@@ -1,0 +1,555 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+#   According to pypa/pipenv#598, it is recommended to include Pipfile.lock in version control.
+#   However, in case of collaboration, if having platform-specific dependencies or dependencies
+#   having no cross-platform support, pipenv may install dependencies that don't work, or not
+#   install all needed dependencies.
+#Pipfile.lock
+
+# PEP 582; used by e.g. github.com/David-OConnor/pyflow
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments - IMPORTANT: Exclude all virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+ml-gpu-env/
+*/env/
+*/venv/
+*/ENV/
+*/ml-gpu-env/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# IDE - VSCode
+.vscode/
+*.code-workspace
+
+# IDE - PyCharm
+.idea/
+*.iml
+*.iws
+
+# IDE - Eclipse
+.project
+.classpath
+.settings/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Project specific
+data/*.db-shm
+data/*.db-wal
+cache/*.db-shm
+cache/*.db-wal
+logs/*.db-shm
+logs/*.db-wal
+
+# Database files (keep structure, ignore data)
+# Uncomment the following lines if you want to ignore database files
+# data/institutions.db
+# data/hospitals.db
+# data/restaurants.db
+# cache/query_cache.db
+# logs/query_log.db
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Backup files
+*.bak
+*.backup
+*.old
+
+# Log files
+*.log
+logs/*.log
+
+# Configuration files with sensitive data
+config.ini
+config.json
+secrets.json
+api_keys.txt
+
+# Test outputs
+test_results/
+test_reports/
+.coverage.*
+htmlcov/
+
+# Documentation build
+docs/build/
+docs/_build/
+
+# Local development
+local/
+dev/
+development/
+
+# Performance and profiling
+*.prof
+*.profile
+
+# Large data files
+*.csv
+*.xlsx
+*.json.large
+data/*.csv
+data/*.xlsx
+data/*.json
+
+# Model files (if any)
+*.pkl
+*.pickle
+*.model
+*.h5
+*.pb
+
+# Streamlit
+.streamlit/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Virtual environment wrappers
+.envrc
+.venvrc
+
+# Local configuration overrides
+local_config.py
+local_settings.py
+
+# Database backups
+*.db.backup
+*.db.bak
+backups/
+
+# Migration files (if using alembic or similar)
+alembic/versions/
+migrations/
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Kubernetes
+*.kubeconfig
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# Monitoring and metrics
+metrics/
+monitoring/
+.grafana/
+
+# Security and certificates
+*.pem
+*.key
+*.crt
+*.p12
+certificates/
+ssl/
+
+# Local scripts and tools
+scripts/local_*
+tools/local_*
+
+# Experimental features
+experimental/
+sandbox/
+
+# Generated documentation
+docs/generated/
+api_docs/
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+
+# Cache directories
+.cache/
+.mcache/
+.parcel-cache/
+
+# Local development databases
+local_db/
+dev_db/
+
+# Performance test results
+perf_results/
+benchmark_results/
+
+# User-specific files
+user_data/
+user_config/
+
+# Temporary notebooks
+*.nbconvert.ipynb
+
+# Local environment files
+.env.local
+.env.development
+.env.test
+.env.production
+
+# Database connection strings (if stored in files)
+db_connections.txt
+database_urls.txt
+
+# API rate limiting and quota files
+rate_limits.json
+quotas.json
+
+# Local development logs
+dev_logs/
+debug_logs/
+
+# Test data
+test_data/
+mock_data/
+
+# Documentation drafts
+docs/drafts/
+docs/work_in_progress/
+
+# Local development tools
+dev_tools/
+local_tools/
+
+# Configuration backups
+config_backups/
+settings_backups/
+
+# Temporary export files
+exports/
+temp_exports/
+
+# Local analytics
+analytics_local/
+usage_stats_local/
+
+# Development databases
+dev_databases/
+test_databases/
+
+# Local monitoring
+monitoring_local/
+local_metrics/
+
+# User-specific configurations
+user_configs/
+personal_settings/
+
+# Build and deployment scripts (local versions)
+deploy_local.sh
+build_local.sh
+
+# Local CI/CD configurations
+.gitlab-ci.local.yml
+.github.local/
+
+# Temporary migration files
+temp_migrations/
+migration_temp/
+
+# Local development secrets
+secrets.local/
+dev_secrets/
+
+# Performance profiling outputs
+profile_output/
+profiling_results/
+
+# Local development cache
+dev_cache/
+local_cache/
+
+# Test output files
+test_output/
+test_results_local/
+
+# Documentation working files
+docs_working/
+documentation_drafts/
+
+# Local development utilities
+dev_utilities/
+local_scripts/
+
+# Temporary data processing files
+temp_data/
+processing_temp/
+
+# Local development databases
+sqlite_dev/
+local_sqlite/
+
+# Backup and archive files
+archives/
+backups_local/
+
+# Development environment specific
+dev_env/
+local_env/
+
+# Temporary configuration files
+temp_config/
+config_temp/
+
+# Local development logs and debugging
+debug_logs/
+dev_debug/
+
+# User-specific development files
+user_dev/
+personal_dev/
+
+# Temporary build files
+temp_build/
+build_temp/
+
+# Local development tools and utilities
+dev_tools_local/
+local_utilities/
+
+# Experimental features and prototypes
+prototypes/
+experimental_features/
+
+# Local development data
+dev_data/
+local_data/
+
+# Temporary export and backup files
+temp_exports/
+local_backups/
+
+# Development-specific monitoring
+dev_monitoring/
+local_metrics/
+
+# User-specific development configurations
+user_dev_config/
+personal_dev_settings/
+
+# Temporary build files
+temp_build/
+build_temp/
+
+# Local development cache
+dev_cache/
+local_cache/
+
+# Test output files
+test_output/
+test_results_local/
+
+# Documentation working files
+docs_working/
+documentation_drafts/
+
+# Local development utilities
+dev_utilities/
+local_scripts/
+
+# Temporary data processing files
+temp_data/
+processing_temp/
+
+# Local development databases
+sqlite_dev/
+local_sqlite/
+
+# Backup and archive files
+archives/
+backups_local/
+
+# Development environment specific
+dev_env/
+local_env/
+
+# Temporary configuration files
+temp_config/
+config_temp/
+
+# Local development logs and debugging
+debug_logs/
+dev_debug/
+
+# User-specific development files
+user_dev/
+personal_dev/
+
+# Temporary build files
+temp_build/
+build_temp/
+
+# Local development tools and utilities
+dev_tools_local/
+local_utilities/
+
+# Experimental features and prototypes
+prototypes/
+experimental_features/
+
+# Local development data
+dev_data/
+local_data/
+
+# Temporary export and backup files
+temp_exports/
+local_backups/
+
+# Development-specific monitoring
+dev_monitoring/
+local_metrics/
+
+# User-specific development configurations
+user_dev_config/
+personal_dev_settings/
