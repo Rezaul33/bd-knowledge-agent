@@ -33,8 +33,7 @@
 
 ### Prerequisites
 - Python 3.8+
-- OpenAI API key (for LLM functionality)
-- Optional: Tavily/SerpAPI key (for web search)
+- Optional API keys for enhanced functionality (see API Setup below)
 
 ### Installation
 
@@ -58,10 +57,16 @@ pip install -r requirements.txt
 4. **Configure environment**
 ```bash
 cp .env.example .env
-# Edit .env with your API keys
+# Edit .env with your API keys (see API Setup section below)
 ```
 
-5. **Run the agent**
+5. **Initialize databases**
+```bash
+# Create databases with sample data
+python scripts/build_databases.py --recreate --sample-data
+```
+
+6. **Run the agent**
 ```bash
 # Interactive mode (CLI)
 python agent/main_agent.py
@@ -73,6 +78,111 @@ python agent/main_agent.py --test
 python run_streamlit.py
 # or directly: streamlit run streamlit_app.py
 ```
+
+## 🔑 API Setup Guide
+
+### 📋 **Important: How the Project Works**
+
+The Bangladesh Knowledge Agent is designed to work **out of the box** with sample data and mock responses:
+
+- ✅ **Database queries** work immediately with built-in SQLite data
+- ✅ **Web search** uses mock responses when no API key is provided
+- ✅ **No API keys required** for basic functionality
+- 🔑 **API keys enhance** the project with real-time data and advanced features
+
+### 🆓 **Free Usage (No API Keys Required)**
+
+The project works perfectly without any API keys:
+
+```bash
+# Just run after installation
+python run_streamlit.py
+```
+
+**What you get without API keys:**
+- 🏛️ **Institutions queries** - Real data from SQLite database
+- 🏥 **Hospital information** - Real data from SQLite database  
+- 🍽️ **Restaurant details** - Real data from SQLite database
+- 🌐 **Mock web search** - Pre-written responses for general queries
+- 📊 **Full functionality** - All features work with sample data
+
+### 💰 **Optional API Keys for Enhanced Features**
+
+To get real-time web search and advanced capabilities, you can add API keys:
+
+#### 🔍 **Web Search APIs (Choose One)**
+
+**1. Tavily (Recommended)**
+- **Cost**: Free tier available (5,000 searches/month)
+- **Setup**: 
+  1. Visit https://tavily.com
+  2. Sign up for free account
+  3. Get API key from dashboard
+  4. Add to `.env`: `TAVILY_API_KEY=your_key_here`
+
+**2. SerpAPI**
+- **Cost**: Free tier available (100 searches/month)
+- **Setup**:
+  1. Visit https://serpapi.com
+  2. Sign up for free account
+  3. Get API key from dashboard
+  4. Add to `.env`: `SERPAPI_API_KEY=your_key_here`
+
+**3. Bing Search**
+- **Cost**: Free tier available (1,000 searches/month)
+- **Setup**:
+  1. Visit https://portal.azure.com
+  2. Create Bing Search resource
+  3. Get API key from resource
+  4. Add to `.env`: `BING_API_KEY=your_key_here`
+
+#### 🤖 **LLM APIs (Optional - Future Enhancement)**
+
+**Note**: Current version uses rule-based routing and doesn't require LLM APIs. Future versions may include:
+
+**OpenAI GPT**
+- **Cost**: Paid usage (~$0.50-30 per 1M tokens)
+- **Setup**:
+  1. Visit https://platform.openai.com
+  2. Create account and add payment method
+  3. Generate API key
+  4. Add to `.env`: `OPENAI_API_KEY=your_key_here`
+
+### 📝 **Environment Configuration**
+
+Create your `.env` file:
+
+```bash
+# Required for enhanced web search (choose one)
+TAVILY_API_KEY=your_tavily_api_key_here
+# SERPAPI_API_KEY=your_serpapi_key_here
+# BING_API_KEY=your_bing_api_key_here
+
+# Optional: Redis for caching
+REDIS_URL=redis://localhost:6379/0
+
+# Optional: OpenAI (future versions)
+# OPENAI_API_KEY=your_openai_api_key_here
+```
+
+### 🎯 **API Key Benefits**
+
+| Feature | Without API Keys | With API Keys |
+|---------|------------------|---------------|
+| 🏛️ Institutions | ✅ Real data | ✅ Real data |
+| 🏥 Hospitals | ✅ Real data | ✅ Real data |
+| 🍽️ Restaurants | ✅ Real data | ✅ Real data |
+| 🌐 Web Search | 📝 Mock responses | 🌐 Real-time results |
+| 📊 Caching | ✅ Local cache | ✅ Enhanced cache |
+| 🔄 Updates | 📝 Static data | 🌐 Live data |
+
+### 💡 **Recommendation**
+
+**For testing and development**: Start without API keys to explore the full functionality.
+
+**For production**: Add at least one web search API key for real-time information.
+
+**For advanced features**: Consider adding multiple search APIs for redundancy.
 
 ## 📁 Project Structure
 
